@@ -4,7 +4,7 @@ window.addEventListener('load', function(){
     const small_nav = document.querySelectorAll('.small-nav li');
     const bgs = document.querySelectorAll('.background li');
     const svg = document.getElementById('svg');
-    
+
     small_nav.forEach(el => el.addEventListener('click', ()=>{
         small_nav.forEach(closenav => closenav.classList.remove('show'));
         el.classList.add('show');
@@ -24,6 +24,6 @@ window.addEventListener('load', function(){
         });
         nav_icons.forEach((el) => el.classList.remove('show'));
         el.classList.add('show');
-        svg.style.top = -800 - 13 + el.offsetTop + 'px';
+        svg.style.top = -798 - 13 + el.offsetTop + 'px';
     }));
 });

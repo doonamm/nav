@@ -64,7 +64,7 @@ ul{
     position: absolute;
 }
 .nav-menus .menu:nth-child(1){
-    top: 106px;
+    top: 108px;
 }
 .nav-menus .menu:nth-child(2){
     top: 262px;
@@ -137,7 +137,7 @@ ul{
 .nav svg{
     position: absolute;
     display: inline-block;
-    top: -700px;
+    top: -698px;
     left: 0;
     transition: .5s linear;
 }
@@ -172,7 +172,6 @@ ul{
 .background li:nth-child(4){
     background-image: url("https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg");
 }
-
 .background li.show{
     opacity: 1;
 }

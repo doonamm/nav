@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: cursive;
+    background: darksalmon;
+}
+ul{
+    list-style: none;
+}
+.demo{
+    width: 100%;
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.nav{
+    position: absolute;
+    min-width: 360px;
+    height: 100%;
+    display: flex;
+    z-index: -2;
+}
+.nav i{
+    font-size: 35px;
+    cursor: pointer;
+    position: relative;
+}
+.nav-icons{
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+    color: rgba(255, 255, 255, .9);
+}
+.nav-icons li i{
+    transition: .3s ease;
+}
+.nav-icons li i.show{
+    opacity: 0;
+}
+.nav-menus{
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 120px;
+    z-index: -1;
+    margin-left: 10px;
+}
+.nav-menus .menu{
+    width: 100%;
+    max-height: 1000px;
+    transition: .8s ease;
+    transform: translateX(-100%);
+    position: absolute;
+}
+.nav-menus .menu:nth-child(1){
+    top: 106px;
+}
+.nav-menus .menu:nth-child(2){
+    top: 262px;
+}
+.nav-menus .menu:nth-child(3){
+    top: 414px;
+}
+.nav-menus .menu:nth-child(4){
+    top: 563px;
+}
+.nav-menus .menu.show{
+    transform: translateX(0);
+}
+.nav-menus .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 15px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menus .list{
+    font-size: 14px;
+    padding: 10px;
+    background: rgba(30, 30, 50, .5);
+    border-radius: 10px;
+    width: fit-content;
+}
+.nav-menus .list li::before{
+    content: '\2022';
+    display: inline-block;
+    font-weight: bold;
+    color: #eee;
+    margin-left: 5px;
+}
+.nav-menus .list p{
+    display: inline-block;
+    width: 180px;
+    margin-left: 7px;
+    vertical-align: top;
+    color: rgba(255, 255, 255, .9);
+}
+.nav-menus .small-nav li{
+    background: rgba(30, 30, 50, .5);
+    width: 120px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: #ddd;
+    transition: all .5s ease;
+    z-index: 100;
+    user-select: none;
+    cursor: pointer;
+}
+.nav-menus .small-nav li.show{
+    width: 160px;
+    color: #fff;
+    background: #01babb;
+}
+.slow{
+    transition: 1s ease;
+    transform: translateX(-100%);
+}
+.menu.show .slow{
+    transform: translateX(0);
+}
+.nav svg{
+    position: absolute;
+    display: inline-block;
+    top: -700px;
+    left: 0;
+    transition: .5s linear;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+.background li{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background li:nth-child(1){
+    background-image: url("https://cdn.wallpapersafari.com/78/98/UmSqOw.jpg");
+}
+.background li:nth-child(2){
+    background-image: url("http://cdn.mos.cms.futurecdn.net/VdW4TCfoctFYDSXNSnkoAf.jpg");
+}
+.background li:nth-child(3){
+    background-image: url("https://www.theindianwire.com/wp-content/uploads/2019/08/pubg-beautiful-hd-wallpaper-4k.jpg");
+}
+.background li:nth-child(4){
+    background-image: url("https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg");
+}
+
+.background li.show{
+    opacity: 1;
+}
